@@ -1,8 +1,9 @@
 # 函数 Python的乐高积木
 
 # 定义
-
+# 就算函数没有返回值 python 也换默认返回一个nonetype的null
 def MyFirstFunction():
+    price=5 #局部变量
     print('这是我第一次创建的函数')
 
 
@@ -35,3 +36,25 @@ Test(,12,434,5457,323)
 print.__doc__
 
 help(print)
+
+
+
+# 在函数里修改全局变量的值 python会在函数内创建一个新的和全局变量同名的局部变量
+# 称为shadowing机制
+
+
+code=5
+
+# 如果一定要改变全局变量可以添加global关键字
+def changecode():
+    global code=10
+
+pring(5)
+
+# 内嵌函数
+
+def fun1():
+    print(1)
+    def fun2():
+        print2
+    fun2()
